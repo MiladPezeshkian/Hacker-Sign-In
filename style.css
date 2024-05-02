@@ -1,0 +1,321 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+h2 {
+  position: fixed;
+  z-index: 10000;
+  color: #00ff01;
+  left: 50%;
+  top: 10%;
+  font-size: 6rem;
+  transform: translate(-50%, -50%);
+  animation: h2ani 3s infinite linear;
+}
+@keyframes h2ani {
+  0% {
+    color: #333333;
+  }
+  50% {
+    color: #53fc53;
+  }
+  100% {
+    color: #333333;
+  }
+}
+.container {
+  height: inherit;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(16, 1fr);
+  grid-template-rows: repeat(9, 1fr);
+  position: relative;
+}
+.squre {
+  width: 100%;
+  height: 100%;
+  background-color: #181818;
+  border: 1px solid black;
+
+  transition: all 3s;
+}
+.squre:hover {
+  transition: all 0.2s;
+  background-color: #00ff01;
+}
+.form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 400px; /* عرض فرم */
+  padding: 20px; /* فاصله داخلی فرم */
+  height: 40rem;
+  border-radius: 1rem;
+  background-color: #222222;
+  z-index: 999;
+  gap: 4rem;
+  box-shadow: 10px 5px 5px black;
+}
+.form input {
+  height: 3rem;
+  width: 80%;
+  border: none;
+  outline: none;
+  background: #333333;
+  color: white;
+  padding: 1rem;
+  font-size: 1.5rem;
+  border-radius: 5px;
+}
+.forgot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 77%;
+  color: #00ff01;
+  font-size: 2rem;
+  cursor: pointer;
+}
+.forgot p {
+  font-size: 1.8rem;
+  color: white;
+  font-family: sans-serif;
+}
+h1 {
+  font-size: 4rem;
+  color: #00ff01;
+  font-family: sans-serif;
+}
+button {
+  width: 80%;
+  color: black;
+  background-color: #00ff01;
+  border: none;
+  outline: none;
+  height: 3rem;
+  font-size: 2rem;
+  border-radius: 10px;
+  cursor: pointer;
+}
+button:hover {
+  opacity: 0.8;
+}
+
+@keyframes changeBorderColor1 {
+  0% {
+    border-bottom-color: black; /* Green for 80% of the time */
+    opacity: 0.99;
+  }
+  11% {
+    border-bottom-color: #00ff01;
+    border-right-color: #00ff01;
+    opacity: 1;
+    /* Switch to black at 80% and stays until 100% */
+  }
+  100% {
+    opacity: 0.99;
+    border-bottom-color: black; /* Green for 80% of the time */
+  }
+}
+@keyframes changeBorderColor2 {
+  0% {
+    border-bottom-color: black; /* Green for 80% of the time */
+    opacity: 0.99;
+  }
+  11% {
+    border-bottom-color: black; /* Green for 80% of the time */
+    opacity: 0.99;
+  }
+  22% {
+    border-bottom-color: #00ff01;
+    border-right-color: #00ff01;
+    opacity: 1;
+    /* Switch to black at 80% and stays until 100% */
+  }
+  100% {
+    opacity: 0.99;
+    border-bottom-color: black; /* Green for 80% of the time */
+  }
+}
+@keyframes changeBorderColor3 {
+  0% {
+    border-bottom-color: black; /* Green for 80% of the time */
+    opacity: 0.99;
+  }
+  22% {
+    border-bottom-color: black; /* Green for 80% of the time */
+    opacity: 0.99;
+  }
+  33% {
+    border-bottom-color: #00ff01;
+    border-right-color: #00ff01;
+    opacity: 1;
+    /* Switch to black at 80% and stays until 100% */
+  }
+  100% {
+    opacity: 0.99;
+    border-bottom-color: black; /* Green for 80% of the time */
+  }
+}
+@keyframes changeBorderColor4 {
+  0% {
+    border-bottom-color: black; /* Green for 80% of the time */
+    opacity: 0.99;
+  }
+  33% {
+    border-bottom-color: black; /* Green for 80% of the time */
+    opacity: 0.99;
+  }
+  44% {
+    border-bottom-color: #00ff01;
+    border-right-color: #00ff01;
+    opacity: 1;
+    /* Switch to black at 80% and stays until 100% */
+  }
+  100% {
+    opacity: 0.99;
+    border-bottom-color: black; /* Green for 80% of the time */
+  }
+}
+@keyframes changeBorderColor5 {
+  0% {
+    border-bottom-color: black; /* Green for 80% of the time */
+    opacity: 0.99;
+  }
+  44% {
+    border-bottom-color: black; /* Green for 80% of the time */
+    opacity: 0.99;
+  }
+  55% {
+    border-bottom-color: #00ff01;
+    border-right-color: #00ff01;
+    opacity: 1;
+    /* Switch to black at 80% and stays until 100% */
+  }
+  100% {
+    opacity: 0.99;
+    border-bottom-color: black; /* Green for 80% of the time */
+  }
+}
+@keyframes changeBorderColor6 {
+  0% {
+    border-bottom-color: black; /* Green for 80% of the time */
+    opacity: 0.99;
+  }
+  55% {
+    border-bottom-color: black; /* Green for 80% of the time */
+    opacity: 0.99;
+  }
+  66% {
+    border-bottom-color: #00ff01;
+    border-right-color: #00ff01;
+    opacity: 1;
+    /* Switch to black at 80% and stays until 100% */
+  }
+  100% {
+    opacity: 0.99;
+    border-bottom-color: black; /* Green for 80% of the time */
+  }
+}
+@keyframes changeBorderColor7 {
+  0% {
+    border-bottom-color: black; /* Green for 80% of the time */
+    opacity: 0.99;
+  }
+  66% {
+    border-bottom-color: black; /* Green for 80% of the time */
+    opacity: 0.99;
+  }
+  77% {
+    border-bottom-color: #00ff01;
+    border-right-color: #00ff01;
+    opacity: 1;
+    /* Switch to black at 80% and stays until 100% */
+  }
+  100% {
+    opacity: 0.99;
+    border-bottom-color: black; /* Green for 80% of the time */
+  }
+}
+@keyframes changeBorderColor8 {
+  0% {
+    border-bottom-color: black; /* Green for 80% of the time */
+    opacity: 0.99;
+  }
+  77% {
+    border-bottom-color: black; /* Green for 80% of the time */
+    opacity: 0.99;
+  }
+  88% {
+    border-bottom-color: #00ff01;
+    border-right-color: #00ff01;
+    opacity: 1;
+    /* Switch to black at 80% and stays until 100% */
+  }
+  100% {
+    opacity: 0.99;
+    border-bottom-color: black; /* Green for 80% of the time */
+  }
+}
+@keyframes changeBorderColor9 {
+  0% {
+    border-bottom-color: black; /* Green for 80% of the time */
+    opacity: 0.99;
+  }
+  88% {
+    border-bottom-color: black; /* Green for 80% of the time */
+    opacity: 0.99;
+  }
+  99% {
+    border-bottom-color: #00ff01;
+    border-right-color: #00ff01;
+    opacity: 1;
+    /* Switch to black at 80% and stays until 100% */
+  }
+  100% {
+    opacity: 0.99;
+    border-bottom-color: black; /* Green for 80% of the time */
+  }
+}
+.div16 {
+  animation: changeBorderColor1 9s infinite linear;
+}
+
+.div32 {
+  animation: changeBorderColor2 9s infinite linear;
+}
+.div48 {
+  animation: changeBorderColor3 9s infinite linear;
+}
+.div64 {
+  animation: changeBorderColor4 9s infinite linear;
+}
+.div80 {
+  animation: changeBorderColor5 9s infinite linear;
+}
+.div96 {
+  animation: changeBorderColor6 9s infinite linear;
+}
+.div112 {
+  animation: changeBorderColor7 9s infinite linear;
+}
+.div128 {
+  animation: changeBorderColor8 9s infinite linear;
+}
+.div144 {
+  animation: changeBorderColor9 9s infinite linear;
+}
